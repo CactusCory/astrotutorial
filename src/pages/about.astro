@@ -1,5 +1,8 @@
 ---
 import '../styles/global.css';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
 const pageTitle = "About Me";
 
 const identity = {
@@ -41,9 +44,7 @@ const textCase = "uppercase"
         </style>
 	</head>
 	<body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
+        <Navigation />
 
 
         <section>
@@ -52,7 +53,7 @@ const textCase = "uppercase"
                     <h1>{pageTitle}</h1>
                 </div>
                 <div class="hero-col">
-                    <img src="../public/headshot-Skype.png" alt="Me">
+                    <img src="../headshot-Skype.png" alt="Me">
                 </div>
                 
             </div>
@@ -81,5 +82,7 @@ const textCase = "uppercase"
 
         {finished && <p>I finished this tutorial!</p>}
         {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+
+        <Footer />
 	</body>
 </html>
